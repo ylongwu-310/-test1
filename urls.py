@@ -17,7 +17,9 @@ urlpatterns = patterns(
     # 应用功能开关控制--请勿修改
     url(r'^app_control/', include('app_control.urls')),
     # 在home_application(根应用)里开始开发你的应用的主要功能
-    url(r'^', include('home_application.urls')),
+    #url(r'^', include('home_application.urls')),
+    url(r'^', 'home_application.views.index'),
+    
     # 组件样例
     url(r'^test_component/', include('test_component.urls')),
     # 后台任务样例
@@ -25,7 +27,6 @@ urlpatterns = patterns(
     # 通用Tags样例
     url(r'^test_app_tags/', include('test_app_tags.urls')),
     #url(r'^', include('home_application.urls')),
-    url(r'^', 'home_application.views.index'),
 )
 
 
