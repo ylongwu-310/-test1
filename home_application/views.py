@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from common.mymako import render_mako_context
+from django.http import HttPesponse
 
+def index(request):
+    return HttpResponse("Hello Word")
 
 def home(request):
     """
