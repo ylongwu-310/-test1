@@ -24,6 +24,8 @@ urlpatterns = patterns(
     url(r'^test_celery/', include('test_celery.urls')),
     # 通用Tags样例
     url(r'^test_app_tags/', include('test_app_tags.urls')),
+    #url(r'^', include('home_application.urls')),
+    url(r'^', 'home_application.views.index'),
 )
 
 
